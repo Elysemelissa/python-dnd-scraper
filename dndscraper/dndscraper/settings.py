@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = 'dndscraper.spiders'
 #USER_AGENT = 'dndscraper (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -65,6 +65,11 @@ ROBOTSTXT_OBEY = True
 #ITEM_PIPELINES = {
 #    'dndscraper.pipelines.DndscraperPipeline': 300,
 #}
+USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1"
+
+ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
+FILES_STORE = '/Users/elyse/dnd'
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
